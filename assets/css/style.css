@@ -1,5 +1,5 @@
 body {
-  background-image: url(../images/castle-wall.jpg);
+  background-image: url(/assets/images/castle-wall.jpg);
   color: white;
   font-family: MedievalSharp; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
 }
