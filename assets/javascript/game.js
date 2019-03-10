@@ -4,7 +4,7 @@ var wordGuessGame = {
     // Object of all words that can be chosen, along their picture and associcated sound
     wordsToPick: {
         sword: {
-            picture: "sword.jpg",
+            picture: "sword.png",
             sound: "sword.mp3",
         },
         mace: {
@@ -14,8 +14,59 @@ var wordGuessGame = {
         queen: {
             picture: "queen.jpg",
             sound: "queen.mp3",
-        }
-
+        },
+        king: {
+            picture: "king.jpg",
+            sound: "king.wav",
+        },
+        prince: {
+            picture: "prince.jpg",
+            sound: "prince.wav",
+        },
+        princess: {
+            picture: "princess.jpg",
+            sound: "princess.mp3",
+        },
+        lance: {
+            picture: "lance.png",
+            sound: "lance.mp3",
+        },
+        castle: {
+            picture: "castle.jpg",
+            sound: "castle.ogg",
+        },
+        catapult: {
+            picture: "catapult.jpg",
+            sound: "catapult.mp3",
+        },
+        joust: {
+            picture: "joust.jpg",
+            sound: "joust.mp3",
+        },
+        crusade: {
+            picture: "crusade.jpg",
+            sound: "crusade.mp3",
+        },
+        dungeon: {
+            picture: "dungeon.jpg",
+            sound: "dungeon.ogg",
+        },
+        // alchemy: {
+        //     picture: "alchemy.jpg",
+        //     sound: "alchemy.mp3",
+        // },
+        shield: {
+            picture: "shield.png",
+            sound: "shield.mp3",
+        },
+        // armor: {
+        //     picture: "armor.jpg",
+        //     sound: "armor.mp3",
+        // },
+        // gauntlet: {
+        //     picture: "gauntlet.jpg",
+        //     sound: "gauntlet.mp3",
+        // }
     },
 
     // Variables that set the initial state of our wordGuess game.
@@ -140,7 +191,7 @@ var wordGuessGame = {
 
     // Function that checks to see if the user has won.
     handleWin: function () {
-        var win = true; 
+        var win = true;
 
         // Checks to see if all letters in the target word have been guessed - any non-guessed letter will make win false
         for (var i = 0; i < this.wordLetters.length; i++) {
@@ -153,12 +204,17 @@ var wordGuessGame = {
 
             this.wins = this.wins + 1;
             document.querySelector("#wins").innerHTML = this.wins;
-            document.querySelector("#game-header").innerHTML = this.wordInPlay;
-            document.querySelector("#med-object").innerHTML =
-                "<img class='med-obj-image' src='assets/images/" +
-                this.wordsToPick[this.wordInPlay].picture + "' alt='" +
-                this.wordInPlay + "'>";
-            var audio = new Audio(this.wordsToPick[this.wordInPlay].sound);
+            document.querySelector("#obj-header").innerHTML = this.wordInPlay;
+            var newImageSrc = "assets/images/" + this.wordsToPick[this.wordInPlay].picture;
+            // console.log(newImageSrc);
+            document.querySelector("#med-obj-image").setAttribute("src", newImageSrc);
+            document.querySelector("#med-obj-image").setAttribute("alt", this.wordInPlay);
+            // document.querySelector("#med-object").innerHTML =
+            //     "<img class='med-obj-image' src='assets/images/" +
+            //     this.wordsToPick[this.wordInPlay].picture + "' alt='" +
+            //     this.wordInPlay + "'>";
+            var audio = new Audio("/assets/sounds/" + this.wordsToPick[this.wordInPlay].sound);
+            console.log("Audio Source:  " + audio);
             audio.play();
             return true;
         }

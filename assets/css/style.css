@@ -1,15 +1,37 @@
 body {
-  background-image: url(/assets/images/castle-wall.jpg);
-  color: white;
-  font-family: MedievalSharp; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
+  background-image: url(/assets/images/castle-wall3.jpg);
+  color: #3e0068;
+  font-family: MedievalSharp; 
+  font-size: 20px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 700;
+  text-shadow: 6px 6px 6px rgba(124, 122, 36, 0.849);
+  line-height: 26.4px; 
+  height: 100%;
+}
+
+.site-title {
+  font-size: 60px;
+  color: gold;
+  text-shadow: 8px 8px 6px black;
+}
+
+#wrapper {
+  position: relative;
+  height: 100%;
 }
 
 #container {
-    position: absolute;
-    top: 200px;
-    left: 500px;
-    height:  200px;
+    position: relative;
+    top: 10%;
+    left: 5%;
+    height: 600px;
+    width: 90%;
     box-sizing: border-box;
+    border: 50px solid;
+    padding: 1%;
+    border-image: url(../images/celtic-knot.png) 33.33% round;
   }
   
   h2 {
@@ -20,27 +42,73 @@ body {
     text-align: center;
   }
   
-  .med-obj-image {
-    width: 360px;
-    height: 250px;
-    /* border-radius: 25px; */
+  #med-obj-image {
+    width: 100%;
+    height: 70%;
+    border-radius: 25px;
   }
   
   #med-object {
-    width: 360px;
+    float: right;
+    width: 40%;
     box-sizing: border-box;
     border: 0;
     /* padding: 20px;
     margin-left: 10px; */
   }
+
+  #obj-header {
+    height: 30%;
+    color: white;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.678);
+  }
   
   #game-section {
+    position: absolute;
+    box-sizing: border-box;
+    top: 5%;
+    left: 2%;
+    width: 50%;
+    height: 90%;
+    padding: 0%; 
+    background-image: url(../images/parchment-paper.jpg);
+    border: 10px solid rgba(255, 217, 0);
+    border-radius: 10px;
+    box-shadow:  5px 5px 0 0 rgba(0, 0, 0, 0.377);
+  }
+
+  #record {
+    box-sizing: border-box;
     float: left;
-    width: 300px;
-    height: 750px;
-    padding: 20px;
-    margin-bottom: 50px;
-    border: 10px solid gold;
-    box-shadow: inset 0 -3px 0 0 #f5f5f5, 0 3px 0 0 black;
+    width: 100%;
+    padding: 0;
+    line-height: 20px;
+  }
+
+  h3.section-title {
+    line-height: 20px;
+    margin: 15px 0;
+  }
+
+  .game-part {
+    clear: both;
+    box-sizing: border-box;
+    /* border: 2px solid rgba(218, 181, 87, 0.288);
+    border-radius: 3px; */
+    height: 20%;
+  }
+
+  .records {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    /* border: 2px solid rgba(218, 181, 87, 0.288);
+    border-radius: 3px; */
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
   }
   

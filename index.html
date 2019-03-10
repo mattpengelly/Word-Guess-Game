@@ -14,35 +14,33 @@
         <h1 class="site-title">MEDIEVAL WORD GUESS</h1>
     </div>
 
-    <div id="container">
-        <h2 id="game-header"></h2>
+    <div id="container" class="clearfix">
         <div id="med-object">
-            <img class=med-obj-image src="assets/images/celtic-header.jpg" alt="Celtic Tapestry">
+            <h2 id="obj-header"></h2>
+            <img id=med-obj-image src="assets/images/medieval-stained-glass.jpg" alt="Medieval Stained Glass">
         </div>
         <div id="game-section">
             <p>Press any key to get started!</p>
-            <div>
-                <h3 class="section-title">Victories</h3>
-                <!-- The div where our wins will be shown. -->
-                <div id="wins">0</div>
+            <div id="record" class="game-part">
+                <div class="records">
+                    <h3 class="section-title">Victories</h3>
+                    <h3 id="wins" class="section-title">0</h3>
+                </div>
+                <div class="records">
+                    <h3 class="section-title">Defeats</h3>
+                    <h3 id="losses" class="section-title">0</h3>
+                </div>
             </div>
-            <div>
-                <h3 class="section-title">Defeats</h3>
-                <div id="losses">0</div>
-            </div>
-            <div id="current-word-section">
+            <div id="current-word-section" class="game-part">
                 <h3 class="section-title">Thy Current Word</h3>
-                <!-- The div where our current word (and guessing progress) will be shown. -->
                 <div id="current-word"></div>
             </div>
-            <div id="guesses-remaining-section">
+            <div id="guesses-remaining-section" class="game-part">
                 <h3 class="section-title">Misses Remaining 'til Thoust Fails</h3>
-                <!-- The div where our remaining guesses will be shown. -->
                 <div id="guesses-remaining"></div>
             </div>
-            <div id="guessed-letters-section">
+            <div id="guessed-letters-section" class="game-part">
                 <h3 class="section-title">Thy Failed Letter Guesses</h3>
-                <!-- The div where our guesses letters will be shown. -->
                 <div id="guessed-letters"></div>
             </div>
         </div>
